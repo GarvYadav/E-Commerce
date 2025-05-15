@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ShopPro - Categories</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <header>
+    <h1>ShopPro</h1>
+    <input type="text" id="search" placeholder="Search products..."/>
+    <div id="cart-btn" onclick="toggleCart()">🛒 <span id="cart-count">0</span></div>
+  </header>
+
+  <nav class="categories" id="category-list">
+  <button onclick="filterCategory('All')">All</button>
+  <button onclick="filterCategory('Electronics')">Electronics</button>
+  <button onclick="filterCategory('Accessories')">Accessories</button>
+  <button onclick="filterCategory('Clothing')">Clothing</button>
+  <button onclick="filterCategory('Books')">Books</button>
+  <button onclick="filterCategory('Home Decor')">Home Decore</button>
+  </nav>
+
+
+  <main>
+    <section class="products" id="product-list"></section>
+    <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+    <aside class="cart" id="cart">
+      <div class="cart-header">
+  <h2>Your Cart</h2>
+  <button class="close-cart" onclick="toggleCart()">X Close</button>
+</div>
+
+
+      <div id="cart-items"></div>
+      <div class="cart-total">Total: ₹<span id="total-price">0</span></div>
+      <button onclick="checkout()">Checkout</button>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
